@@ -18,9 +18,9 @@ import {
 //native-base
 import { Spinner } from "native-base";
 
-const BakeryDetail = () => {
+const BakeryDetail = ({ navigation, route }) => {
+  const { bakery } = route.params;
   if (bakeryStore.loading) return <Spinner />;
-  const bakery = bakeryStore.bakeries[1];
 
   const cookies = bakery.cookies.map((cookie) =>
     cookieStore.getCookieById(cookie.id)

@@ -10,7 +10,7 @@ import {
   Title,
 } from "../styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <HomeBackground
       source={{
@@ -23,7 +23,7 @@ const Home = () => {
           <Title>Cookies and Beyond</Title>
         </TopStyling>
         <BottomStyling>
-          <ButtonStyling onPress={() => alert("Take me to the bakeries")}>
+          <ButtonStyling onPress={() => navigation.navigate("BakeryList")}>
             Click here to skip
           </ButtonStyling>
         </BottomStyling>
