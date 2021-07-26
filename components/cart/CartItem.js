@@ -2,7 +2,11 @@ import { List } from "native-base";
 import { Text } from "react-native";
 import React from "react";
 
-import { TotalPrice } from "./styles";
+//styles
+import { TotalPrice, TrashIcon } from "./styles";
+
+//stores
+import cartStore from "../../stores/cartStore";
 
 const CartItem = ({ item }) => {
   return (
@@ -12,6 +16,11 @@ const CartItem = ({ item }) => {
         {item.price} KD x {item.quantity}
       </Text>
       <TotalPrice>{item.price * item.quantity} KD</TotalPrice>
+      <TrashIcon
+        name="trash"
+        size={24}
+        onPress={() => cartStore.deleteFromCart(item.id)}
+      />
     </List.Item>
   );
 };

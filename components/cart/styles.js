@@ -14,7 +14,7 @@ export const CartButtonStyled = styled(FontAwesome)`
 `;
 export const CartTextStyled = styled.Text`
   color: ${(props) => props.theme.white};
-  font-size: 20px;
+  font-size: 14px;
 `;
 
 export const TrashIcon = styled(FontAwesome)`

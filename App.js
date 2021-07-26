@@ -8,7 +8,7 @@ import { ThemeProvider } from "styled-components";
 
 //navigation
 import { NavigationContainer } from "@react-navigation/native";
-import RootNavigator from "./components/Navigation/index";
+import RootNavigator from "./components/Navigation";
 
 const theme = {
   mainColor: "#293241",
